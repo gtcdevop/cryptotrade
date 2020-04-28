@@ -7,6 +7,11 @@
 
 <ion-content padding>
 
+  <ion-item>
+    <ion-label floating ></ion-label>
+    <ion-input type="" [(ngModel)]="mensagem" ></ion-input>
+  </ion-item>
+  <div>{{mensagem}}</div>
   <button ion-button block (click)="buscarlivro()">Livro de ofertas</button>
 
 </ion-content>
