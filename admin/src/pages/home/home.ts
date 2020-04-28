@@ -1,3 +1,4 @@
+import { Coins } from './../../model/Coins';
 import { MercadobitcoinProvider } from './../../providers/mercadobitcoin/mercadobitcoin';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
@@ -17,7 +18,7 @@ export class HomePage {
   }
 
   buscarlivro() {
-    this.mensagem = this.mbP.generateTapiCode(this.mensagem)
+   this.mbP.getBookOrders(Coins.BTC)
   }
 
 }

@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { MercadobitcoinProvider } from '../providers/mercadobitcoin/mercadobitcoin';
 import { HttpClientModule } from '@angular/common/http';
+import { UtilfunctionsProvider } from '../providers/utilfunctions/utilfunctions';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    MercadobitcoinProvider
+    MercadobitcoinProvider,
+    UtilfunctionsProvider
   ]
 })
 export class AppModule {}
