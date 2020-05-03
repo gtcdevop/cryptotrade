@@ -8,17 +8,19 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { MercadobitcoinProvider } from '../providers/mercadobitcoin/mercadobitcoin';
 import { HttpClientModule } from '@angular/common/http';
-import { UtilfunctionsProvider } from '../providers/utilfunctions/utilfunctions';
+import { UtilfunctionsProvider } from '../providers/util/utilfunctions';
+import { BarQuotationComponent } from '../components/BarQuotation/BarQuotation.component';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    BarQuotationComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp)    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,6 +36,4 @@ import { UtilfunctionsProvider } from '../providers/utilfunctions/utilfunctions'
   ]
 })
 export class AppModule {}
-// 91,160 Milhoes Pessoas para trabalhar
-//0,32 Taxa mortalidade  - 5%
-//
+
