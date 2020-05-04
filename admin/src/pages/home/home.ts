@@ -9,6 +9,13 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
   mensagem: string;
+  quote: any = {
+    exchangeName: "Mercado BitCoin",
+    percentToday: 3.40,
+    min: 15786.44,
+    max: 23543.24,
+    currentValue: 20132.30
+}
 
   constructor(public navCtrl: NavController,
     private mbP: MercadobitcoinProvider,

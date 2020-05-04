@@ -1,1 +1,23 @@
-<h1>Teste</h1>
+<section id="barQuotation">
+    <div id="infoQuotation">
+        <div class="title">
+            {{exchangeName}}
+        </div>
+        <div class="quotation" [style.color]="GetTypeOfOscilation">
+            {{percentToday}}%
+        </div>
+    </div>
+    <div id="bar">
+        <div class="dynamic-bar">
+            <div class="min">
+                <span class="value">{{min}}</span>
+            </div>
+            <div class="max">
+                <span class="value">{{max}}</span>
+            </div>            
+            <div class="currentValue" [style.marginLeft.%]="currentValueBar">
+                <span class="value">{{currentValue}}</span>
+            </div>            
+        </div>
+    </div>    
+</section>

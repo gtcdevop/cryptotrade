@@ -13,5 +13,14 @@
   </ion-item>
   <div>{{mensagem}}</div>
   <button ion-button block (click)="buscarlivro()">Livro de ofertas</button>
-
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <app-BarQuotation [Quote]="quote"></app-BarQuotation>
+      </ion-col>
+      <ion-col></ion-col>
+      <ion-col></ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
