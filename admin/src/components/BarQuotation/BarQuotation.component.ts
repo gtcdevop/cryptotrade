@@ -14,6 +14,9 @@ export class BarQuotationComponent implements OnInit {
     max: number;
     currentValue: number;
 
+    positive: string = "#27ae60";
+    negative: string = "#e74c3c"
+
     constructor() { }
 
     ngOnInit() { 
@@ -30,5 +33,9 @@ export class BarQuotationComponent implements OnInit {
          let current = this.currentValue - this.min;
          let getPercent = current / baseCalc * 100;
          return getPercent / max * 100;
+     }
+
+     get GetTypeOfOscilation(){
+         return this.percentToday >= 0 ? this.positive : this.negative;
      }
 }
