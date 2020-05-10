@@ -1,3 +1,4 @@
+import { Coins } from './../model/Coins';
 import { BookOrder } from "../model/BookOrder";
 
 export interface Exchange {

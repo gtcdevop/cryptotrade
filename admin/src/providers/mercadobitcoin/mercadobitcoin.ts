@@ -23,7 +23,7 @@ export class MercadobitcoinProvider implements Exchange {
 
   private readonly PRIVATE_TOKEN_ID: string = "b380c0843f150b5c6e79e6740d4b9812"
 
-  private readonly REQUEST_PATH: string = '/tapi/v3/'
+  private readonly REQUEST_PATH: string = '/tapi/v3'
 
   constructor(public http: HttpClient,
     private utilFuncion: UtilfunctionsProvider
@@ -52,22 +52,26 @@ export class MercadobitcoinProvider implements Exchange {
       'tapi_nonce': now,
       'coin_pair': 'BRLBTC'
     }
-    let paramsString: string = this.utilFuncion.paramsUrlEncode(this.REQUEST_PATH + "?" + params)
+    let paramsString: string = this.utilFuncion.paramsUrlEncode(params)
 
     let hex = this.generateTapiCode(this.PRIVATE_TOKEN_PASS, paramsString);
     //// SE HEADERS
-    let headers: HttpHeaders = new HttpHeaders();
-    headers.set('TAPI-ID', this.PRIVATE_TOKEN_ID)
-    headers.set('TAPI-MAC', hex)
-    headers.set("Content-Type", "application/x-www-form-urlencoded")
+    let headers: any = {
+      'TAPI-ID': String(this.PRIVATE_TOKEN_ID),
+      'TAPI-MAC': String(hex),
+      "Content-Type": "application/x-www-form-urlencoded"
+    }
 
-    let options = {
+    let options: any = {
+      body: null,
       headers: headers,
       params: params,
       responseType: 'json'
     }
-    this.http.post(this.BASE_URL + this.REQUEST_PATH, null, options).toPromise().then(scc => {
-      console.log(scc)
+
+    let requestUrl = this.BASE_URL + this.REQUEST_PATH;
+    this.http.request("POST", requestUrl, options).toPromise().then(scc => {
+      console.info(scc)
     }).catch(err => {
       console.error(err)
     })
