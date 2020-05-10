@@ -1,0 +1,32 @@
+<section id="TradeSignal" (click)="OpenClose()">
+    <div class="exchange ex-1">
+        <h6>Mercado BitCoin</h6>
+        <hr>
+        <h6>bid: 0909090.88</h6>        
+    </div>
+    <div class="data-and-trades" [ngClass]="{open: isOpen}">
+        <div class="trade">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">QTD: </div>
+                </div>
+                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="00.00000">
+              </div>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">USD: </div>
+                </div>
+                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="00.00000">
+              </div>
+              <button style="color:white; background-color:green;">></button>
+        </div>
+        <div class="data">
+
+        </div>
+    </div>
+    <div class="exchange ex-2">   
+        <h6>ask: 0909090.88</h6>       
+        <hr>
+        <h6>ExCoin</h6>
+    </div>
+</section>

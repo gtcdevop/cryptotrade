@@ -1,0 +1,93 @@
+app-TradeSignal{
+    #TradeSignal{
+        width: 100%;
+        overflow: hidden;
+        border: 1px solid black;
+        border-radius: 10px;
+        position: relative;
+        display: block;
+    }
+    .exchange{
+        height: 70px;
+        border: 1px solid black;
+        text-align: center;
+        padding: 0 20px;;
+        h6:first-child{
+            margin-top: 8px !important;
+        }
+    }
+    .data-and-trades {
+        transition: all 0.4s;
+        height: 0px;
+        overflow: hidden;
+    }
+
+
+
+    h6{
+        margin: 0 !important;
+    }
+    .open{
+        height: 100px !important;
+    }
+    
+    .trade{
+        display: flex;
+        justify-content: center;
+        margin: 5px 0px;
+        input#inlineFormInputGroup {
+            width: 72px !important;
+        }
+    }
+    
+    .input-group {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+    }
+
+    .input-group-append, .input-group-prepend {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .input-group-text {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: .375rem .75rem;
+        margin-bottom: 0;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        text-align: center;
+        white-space: nowrap;
+        background-color: #e9ecef;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+    }
+    .form-control {
+        display: block;
+        width: 100%;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+}
