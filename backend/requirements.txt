@@ -1,0 +1,12 @@
+## MicroFramework
+flask=2.10.1
+## Schedule Events
+APScheduler=3.6.3
+## Mercado bitcoin
+mercado-bitcoin=1.0.0
+## Mercado Financeiro 
+influxdb=5.3.0
+
+## AlphVantage MGR741RSO0XUR79A
+
+
